@@ -92,6 +92,9 @@ class Listing extends Component {
     return (
       <div>
         <div>
+          <h1>SCRAPE FLIPKART LISTINGS</h1>
+        </div>
+        <div>
           <input
             id="textInp"
             className="newURL"
@@ -107,7 +110,10 @@ class Listing extends Component {
           <h3>{this.state.errors}</h3>
         </div> 
         <div>
-        <Table striped bordered responsive size="sm">
+        <div>
+          <h3>SCRAPED LISTINGS</h3>
+        </div>
+        <table className="table-striped table-bordered table-responsive table-fixed table-sm fixed-col-width" >
             <thead>
                 <tr>
                   <td>
@@ -130,7 +136,7 @@ class Listing extends Component {
                 <tbody key={listing.attributes.id}  className="listing-table">
                   <tr>
                     <td>
-                      {listing.attributes.url}
+                      <a href={listing.attributes.url} target="_blank"  rel="noreferrer"> {listing.attributes.url} </a>
                     </td>
                     <td>
                       {listing.attributes.title || 'Title not available'} 
@@ -146,7 +152,7 @@ class Listing extends Component {
               );
             }
           )}
-          </Table>
+          </table>
         </div>
        </div>
      );

@@ -39,7 +39,23 @@
 
 .newURL {
   padding: 10px;
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
   border-radius: 25px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.fixed-col-width {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.fixed-col-width td {
+  width: 30%;
+  word-break: break-all;
+}
+
+.fixed-col-width thead td {
+  background-color: #bfc0c2;
 }
